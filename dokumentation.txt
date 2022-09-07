@@ -1,0 +1,15 @@
+simple vue app zum laufen bringen auf heroku:
+
+1.) installieren von express , npm i express
+2.) in package.json das start-script manipuliert:
+"scripts": {
+    "start": "vue-cli-service serve",
+3.)
+heroku config:set NPM_CONFIG_PRODUCTION=false YARN_PRODUCTION=false
+4.)I believe you need to change vue.config.js
+
+module.exports = {
+  devServer: {
+    disableHostCheck: true
+  }
+}
